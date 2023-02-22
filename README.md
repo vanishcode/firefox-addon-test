@@ -1,5 +1,7 @@
 # firefox-addon-test
 
+https://github.com/clauderic/dnd-kit/issues/1043
+
 https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#installing
 
 dist/manifest.json
