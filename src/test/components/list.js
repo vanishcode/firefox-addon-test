@@ -30,19 +30,29 @@ export function SortableList({ items, onChange, renderItem }) {
     );
     return (<DndContext
         sensors={sensors}
-        onDragStart={({ active }) => {
+        onDragStart={(params) => {
+            console.log(params, 'start');
+            const { active } = params;
             setActive(active);
         }}
-        onDragEnd={({ active, over }) => {
+        onDragEnd={(params) => {
+            console.log(params, 'end');
+            const { active, over } = params;
             if (over && active.id !== over?.id) {
                 const activeIndex = items.findIndex(({ id }) => id === active.id);
                 const overIndex = items.findIndex(({ id }) => id === over.id);
-
                 onChange(arrayMove(items, activeIndex, overIndex));
             }
             setActive(null);
         }}
-        onDragCancel={() => {
+        onDragMove={(params) => {
+            // console.log(params, 'move');
+        }}
+        onDragOver={(params) => {
+            console.log(params, 'over');
+        }}
+        onDragCancel={(params) => {
+            console.log(params, 'cancel');
             setActive(null);
         }}
     >

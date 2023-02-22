@@ -9,7 +9,7 @@ function createRange(length, initializer) {
 }
 
 function getMockItems() {
-  return createRange(50, (index) => {
+  return createRange(5, (index) => {
     return { id: index + 1 };
   });
 }
