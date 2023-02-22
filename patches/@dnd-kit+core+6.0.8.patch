@@ -1,0 +1,13 @@
+diff --git a/node_modules/@dnd-kit/core/dist/core.esm.js b/node_modules/@dnd-kit/core/dist/core.esm.js
+index 91671e9..55fd6b0 100644
+--- a/node_modules/@dnd-kit/core/dist/core.esm.js
++++ b/node_modules/@dnd-kit/core/dist/core.esm.js
+@@ -1434,7 +1434,7 @@ class AbstractPointerSensor {
+       passive: false
+     });
+     this.listeners.add(events.end.name, this.handleEnd);
+-    this.windowListeners.add(EventName.Resize, this.handleCancel);
++    // this.windowListeners.add(EventName.Resize, this.handleCancel);
+     this.windowListeners.add(EventName.DragStart, preventDefault);
+     this.windowListeners.add(EventName.VisibilityChange, this.handleCancel);
+     this.windowListeners.add(EventName.ContextMenu, preventDefault);
